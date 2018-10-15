@@ -14,6 +14,7 @@ namespace WebApiValidation
             // Web API 路由
             config.MapHttpAttributeRoutes();
 
+            FluentValidationModelValidatorProvider.Configure(config);
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
